@@ -1,9 +1,11 @@
 import React from 'react';
+// import GalleryList from '../GalleryList.jsx';
+// import GalleryItem from '../GalleryItem.jsx';
 import './App.css';
 
 function App() {
 
-  
+
     return (
       <div className="App">
         <header className="App-header">
@@ -11,6 +13,9 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <img src="images/goat_small.jpg"/>
+
+        {/* <GalleryItem /> */}
+        {/* <GalleryList /> */}
       </div>
     );
 }
