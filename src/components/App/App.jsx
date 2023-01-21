@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-// import GalleryList from '../GalleryList.jsx';
+import GalleryList from '../GalleryList/GalleyList.jsx';
 // import GalleryItem from '../GalleryItem.jsx';
 import './App.css';
 
@@ -57,9 +57,12 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <img src="images/goat_small.jpg"/>
-
-        {/* <GalleryItem /> */}
-        {/* <GalleryList /> */}
+        <GalleryList
+        newGallery = {newGallery} />
+        {/* <GalleryItem 
+        galleyItems = {galleryItems} /> */}
+        {/* <GalleryList 
+        galleryList = {galleryList} /> */}
       </div>
     );
 }

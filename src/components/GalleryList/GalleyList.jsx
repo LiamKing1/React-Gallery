@@ -1,11 +1,16 @@
 import React from "react";
 import './GalleryList.css';
 
-function GalleryList() {
+function GalleryList({newGallery}) {
 
     return(
         
         <div>
+            { newGallery.map((galleryItems) => {
+                <GalleryList
+                galleryItems = {galleryItems.id}/>
+            })
+        }
             {/* <GalleryList /> */}
 
             <p> We are in GalleryList, fasho! </p>
