@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const galleryItems = require('../modules/gallery.data');
 
+
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
 // PUT Route
@@ -19,6 +20,7 @@ router.put('/like/:id', (req, res) => {
 // GET Route
 router.get('/', (req, res) => {
     res.send(galleryItems);
+    console.log('InGET router', galleryItems);
 }); // END GET Route
 
 module.exports = router;
