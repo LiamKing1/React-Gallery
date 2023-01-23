@@ -1,19 +1,21 @@
 import React from "react";
-import './GalleryList.css';
+import GalleryItem from "../GalleryItem/GalleryItem.jsx";
 
-function GalleryList({newGallery}) {
+function GalleryList({ newGallery, getGallery }) {
 
-    return(
-        
-        <div>
-            { newGallery.map((galleryItems) => {
-                <GalleryList
-                galleryItems = {galleryItems.id}/>
-            })
-        }
+    return (
+
+        <div className="galList">
+            {/* <h1>OH, HOW BEAUTIFUL BARCELONA IS!</h1> */}
+            {newGallery.map((photo) => {
+                return(
+                <GalleryItem
+                    key = {photo.id}
+                    photo = {photo} 
+                    getGallery = {getGallery}/>
+            )})
+            }
             {/* <GalleryList /> */}
-
-            <p> We are in GalleryList, fasho! </p>
         </div>
     )
 }
