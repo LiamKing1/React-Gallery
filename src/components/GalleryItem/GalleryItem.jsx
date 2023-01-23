@@ -7,7 +7,19 @@ function GalleryItem({ getGallery, photo }) {
 
 
     console.log(photo);
-    const [swapImage, newSwapImage] = useState(true)
+    const [swapImage, letsSwapImage] = useState(true)
+
+    // const swapfunction = () => {
+    //     letsSwapImage(!swapImage);
+    // }
+
+    // const controlSwap = () => {
+    //     if (swapImage) {
+    //         return <img src={photo.path}></img>
+    //     } else {
+    //         return <p> {photo.description} </p>
+    //     }
+    // }
 
     const updateLikes = (id) => {
         Axios({
@@ -30,9 +42,11 @@ function GalleryItem({ getGallery, photo }) {
             <div className='column'>
 
                 <img src={photo.path} />
+                <p> {photo.description} </p>
+                <p> Likes: {photo.likes} </p>
                 <p className="butClick">
                     <button style={{ width: '200px', height: '50px', }}
-                        onClick={() => updateLikes(id)}> LIKE </button>
+                        onClick={() => updateLikes(photo.id)} > LIKE </button>
                 </p>
 
             </div>
