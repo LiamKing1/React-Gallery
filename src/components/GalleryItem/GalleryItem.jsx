@@ -5,21 +5,19 @@ import '../GalleryItem/GalleryItem.css';
 // function GalleryItem({newGallery}) {
 function GalleryItem({ getGallery, photo }) {
 
-
-    console.log(photo);
     const [swapImage, letsSwapImage] = useState(true)
 
-    // const swapfunction = () => {
-    //     letsSwapImage(!swapImage);
-    // }
+    const swapFunction = () => {
+        letsSwapImage(!swapImage);
+    }
 
-    // const controlSwap = () => {
-    //     if (swapImage) {
-    //         return <img src={photo.path}></img>
-    //     } else {
-    //         return <p> {photo.description} </p>
-    //     }
-    // }
+    const controlSwap = () => {
+        if (swapImage) {
+            return <img src={photo.path}></img>
+        } else {
+            return <p> {photo.description} </p>
+        }
+    }
 
     const updateLikes = (id) => {
         Axios({
@@ -41,8 +39,9 @@ function GalleryItem({ getGallery, photo }) {
 
             <div className='column'>
 
-                <img src={photo.path} />
-                <p> {photo.description} </p>
+                <img src={photo.path} onClick={() => console.log(photo.description)}/>
+                
+                {/* <p className='scription'> {photo.description} </p> */}
                 <p> Likes: {photo.likes} </p>
                 <p className="butClick">
                     <button style={{ width: '200px', height: '50px', }}
